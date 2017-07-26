@@ -13,6 +13,14 @@ The black wire is the wire that is providing 5 volts to the relay.  When the rel
 
 The Redboard and relay kit were mounted securely in the electrical junction box to ensure the fragile jumper cables would stay where they are supposed to.  Also, we secured the wires at the openings in the box with enough slack to prevent the connections from coming loose.
 
+## Arduino Code
+
+The [arduino-code.ino](arduino-code.ino) sketch was uploaded on the Arduino using the Arduino IDE.
+
+## MATLAB Code
+
+The [MATLAB_code.m](MATLAB_code.m) script was run in MATLAB.
+
 ## Results
 The water pump will turn on when the user inputs 1.  The water pump will turn on for a specific duration when the user inputs 2.  The water pump will shut off when the user inputs 3.
 ![Alt text](/doc/results.png?raw=true "Optional Title")
