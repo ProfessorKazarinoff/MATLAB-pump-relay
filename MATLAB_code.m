@@ -1,12 +1,12 @@
 %% Clear command window, variables, plot windows and connected devices
 clc, clear all
 close all
-delete(instrfindall); %deletes any existing serial ports
+delete(instrfindall); % deletes any existing serial ports
 
 %% Open the serial port to connect to the Arduino
 arduino=serial('/dev/cu.usbserial-DN02SRDI','BaudRate',9600); % change first argument to correspond to the port the arduino is hooked up to
 fopen(arduino);
-serial_read = fscanf(arduion, '%d',1) %read current serial output from arduino (0 is open/not connected, 1 is closed/connected)
+serial_read = fscanf(arduino, '%d',1) %read current serial output from arduino (0 is open/not connected, 1 is closed/connected)
 
 %% Offer user options based on relay state
 while serial_read == 0 % if relay is open/not connected, offer three options
@@ -42,12 +42,12 @@ while serial_read == 0 % if relay is open/not connected, offer three options
             case 1
                 fprintclc, clear all
 close all
-delete(instrfindall); %deletes any existing serial ports
+delete(instrfindall); % deletes any existing serial ports
 
 %% Open the serial port to connect to the Arduino
 arduino=serial('/dev/cu.usbserial-DN02SRDI','BaudRate',9600); % change first argument to correspond to the port the arduino is hooked up to
 fopen(arduino);
-serial_read = fscanf(arduion, '%d',1) %read current serial output from arduino (0 is open/not connected, 1 is closed/connected)f(arduino,'%d',0)
+serial_read = fscanf(arduion, '%d',1) % read current serial output from arduino (0 is open/not connected, 1 is closed/connected)f(arduino,'%d',0)
                 fclose(arduino)
                 break
             otherwise
